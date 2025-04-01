@@ -1,0 +1,33 @@
+/* Global Background Styles for Game Developer Portfolio */
+body {
+  background-color: #f5f6fa; /* Light background color from the existing styles */
+}
+
+/* Apply the same background style to all pages */
+.page {
+  position: relative;
+  background: 
+    linear-gradient(135deg, rgba(108,92,231,0.1) 0%, rgba(162,155,254,0.1) 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><g fill-opacity="0.03"><polygon points="400,0 800,400 400,800 0,400"/><polygon points="200,0 600,0 400,200"/></g></svg>');
+  background-blend-mode: soft-light;
+}
+
+/* Ensure content is visible above the background */
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Add subtle controller pattern to all pages */
+.page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M50 80h20v20H50zM130 80h20v20h-20zM80 130h40v20H80z" fill="%23ffffff" opacity="0.02"/></svg>');
+  background-size: 60px;
+  z-index: 0;
+  pointer-events: none;
+}

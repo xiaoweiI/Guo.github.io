@@ -1,0 +1,13 @@
+/* Low-poly Geometry Background Styles */
+.hero {
+  position: relative;
+  background: 
+    linear-gradient(135deg, rgba(108,92,231,0.3) 0%, rgba(162,155,254,0.3) 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><g fill-opacity="0.05"><polygon points="400,0 800,400 400,800 0,400"/><polygon points="200,0 600,0 400,200"/></g></svg>');
+  background-blend-mode: soft-light;
+}
+
+/* Ensure the particles container is visible above the low-poly background */
+#particles-js {
+  background: transparent !important;
+}

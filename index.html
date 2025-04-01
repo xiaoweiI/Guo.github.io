@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pixel Art Portfolio</title>
+    <link rel="stylesheet" href="global-bg.css">
+    <link rel="stylesheet" href="pixel-style.css">
+    <link rel="stylesheet" href="low-poly-bg.css">
+    <link rel="stylesheet" href="retro-crt.css">
+    <link rel="stylesheet" href="controller-pattern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <script src="pixel-script.js" defer></script>
+    <script src="management-game-bg.js" defer></script>
+    <script src="particle-animation.js" defer></script>
+    <script src="typing-effect.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">My Portfolio</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" data-page="home" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#about" data-page="about" data-i18n="nav_about">About</a></li>
+                    <li><a href="#games" data-page="games" data-i18n="nav_games">Game Portfolio</a></li>
+                    <li><a href="#archive" data-page="archive" data-i18n="nav_archive">Archive</a></li>
+                    <li><a href="#skills" data-page="skills" data-i18n="nav_skills">Skills</a></li>
+                    <li><a href="#contact" data-page="contact" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+                <button id="langSwitcher" class="lang-switcher">中文</button>
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1><span data-i18n="hero_hello">Hello, I'm</span> <span class="highlight">Xiaowei</span></h1>
+                    <h2 data-i18n="hero_title">Game Developer & Designer</h2>
+                    <p data-i18n="hero_welcome">Welcome to my personal portfolio website showcasing my work and passion for game development.</p>
+                    <div class="cta-buttons">
+                        <a href="#games" data-page="games" class="pixel-btn primary-btn" data-i18n="hero_view_work">View My Work</a>
+                        <a href="#contact" data-page="contact" class="pixel-btn secondary-btn" data-i18n="hero_contact">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Floating pixel boxes will be added by JavaScript -->
+        </section>
+        
+        <div class="container">
+            <div class="page-navigation">
+                <button class="nav-button page-nav-btn" data-page="about" data-i18n="nav_next">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" class="page">
+        <section class="about">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about_title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="image-placeholder profile-photo-container">
+                            <img src="profile photo pixel.png" alt="Pixelated Profile Photo" class="profile-photo pixel-photo" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="Profile Photo.jpg" alt="Profile Photo" class="profile-photo real-photo" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <p data-i18n="about_p1">Hello! I'm a passionate game developer with a strong background in both design and programming. I love creating immersive experiences that engage players and tell compelling stories.</p>
+                        <p data-i18n="about_p2">With several years of experience in the gaming industry, I've worked on a variety of projects ranging from mobile games to PC titles. My expertise includes game mechanics design, level design, and implementing engaging gameplay systems.</p>
+                        <p data-i18n="about_p3">When I'm not coding or designing games, you can find me exploring new game releases, participating in game jams, or experimenting with new technologies and tools in the game development space.</p>
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="info_name">Name:</span>
+                                <span class="info-value">Xiaowei Guo</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="info_email">Email:</span>
+                                <span class="info-value">guoxiaowei7@hotmail.com</span>
+                                <span class="info-value">guoxiaowei723@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="info_location">Location:</span>
+                                <span class="info-value">Boston, US</span>
+                                <span class="info-value">Hangzhou, Zhejiang</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label" data-i18n="info_experience">Experience:</span>
+                                <span class="info-value" data-i18n="experience_years">5+ Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="container">
+            <div class="page-navigation">
+                <button class="nav-button page-nav-btn" data-page="home" data-i18n="nav_prev">Previous</button>
+                <button class="nav-button page-nav-btn" data-page="games" data-i18n="nav_next">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Games Page -->
+    <div id="games-page" class="page">
+        <section class="games">
+            <div class="container">
+                <h2 class="section-title" data-i18n="games_title">Game Portfolio</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                    <button class="filter-btn" data-filter="pc" data-i18n="filter_pc">PC Games</button>
+                    <button class="filter-btn" data-filter="board-game" data-i18n="filter_board">Board Games</button>
+                    <button class="filter-btn" data-filter="jam" data-i18n="filter_jam">Game Jam</button>
+                </div>
+                <div class="games-grid">
+                    <!-- AI Adoption Program -->
+                    <div class="game-card pixel-border" data-category="jam pc">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="Ai Adoption.png" alt="AI Adoption Program" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>AI Adoption Program</h3>
+                            <p>Emotional interaction game about AI characters adopting humans. 2023 Game Jam Entry exploring dystopian themes.</p>
+                            <a href="https://itch.io/jam/jam-o-lantern-2023/rate/2349931" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Quoted Out! -->
+                    <div class="game-card pixel-border" data-category="jam pc">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="Quated out.png" alt="Quoted Out!" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Quoted Out!</h3>
+                            <p>Dialogue-based party game where players create humorous videos by editing interviews. 2024 Global Game Jam Winner.</p>
+                            <a href="https://globalgamejam.org/games/2024/funny-street-quiz-2" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                            <a href="https://www.youtube.com/watch?v=AJqIjL--6O8" 
+                               target="_blank" 
+                               class="archive-link">Video</a>
+                        </div>
+                    </div>
+
+                    <!-- Party! Paidui! Fiesta! -->
+                    <div class="game-card pixel-border" data-category="pc">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="party paidui.png" alt="Party! Paidui! Fiesta!" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Party! Paidui! Fiesta!</h3>
+                            <p>New project in development. Details will be announced soon.</p>
+                            <a href="https://valentinali.itch.io/party-paidui-fiesta" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Back Home -->
+                    <div class="game-card pixel-border" data-category="pc">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="BackHome.png" alt="Back Home" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Back Home</h3>
+                            <p>Back Home is a life sim where a girl collects daily items with limited money. Your choices shape relationships and unlock multiple endings.</p>
+                            <a href="https://xiaowei723.itch.io/backhome-final" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Dorm Unpacking -->
+                    <div class="game-card pixel-border" data-category="pc">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="dorm unpacking.png" alt="Dorm Unpacking" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Dorm Unpacking</h3>
+                            <p>Dorm Unpacking is a cozy puzzle game where you unpack and place items in a dorm room to earn points based on thoughtful organization.</p>
+                            <a href="https://xiaoweii.itch.io/final-project" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Zombie Juice -->
+                    <div class="game-card pixel-border" data-category="board-game">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="Zombie Juice.png" alt="Zombie Juice" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Zombie Juice</h3>
+                            <p>Match-3 board game with day/night cycle mechanics. Run a smoothie shop serving both humans and zombies.</p>
+                            <a href="https://www.canva.com/design/DAF_nJigNuY/_StFwFH1fXH1CLmLNF8Ww/edit" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Beneath the Ruins -->
+                    <div class="game-card pixel-border" data-category="board-game">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="Beneath the ruins.png" alt="Beneath the Ruins" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Beneath the Ruins</h3>
+                            <p>Post-apocalyptic survival board game with resource management. Survive in a harsh environment after a catastrophic event.</p>
+                            <a href="https://docs.google.com/document/d/1qnsKgKxGZD807CMnPaZ1Sj9cDMblbHPJocQRZWjhGZg/edit" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Wallet War -->
+                    <div class="game-card pixel-border" data-category="board-game">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="Wallet War.png" alt="Wallet War" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Wallet War</h3>
+                            <p>Card game about managing finances and competing for wallet space. Adapted from the classic board game "Love Letter".</p>
+                            <a href="https://docs.google.com/document/d/18dWQ4Yt_3UwC83mGMStgjUxLmIV_rFY94Vv1zG62ZE/edit" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Princess Lianan -->
+                    <div class="game-card pixel-border" data-category="pc">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="Lianan.png" alt="Princess Lianan" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Princess Lianan</h3>
+                            <p>Fantasy RPG adventure with princess protagonist. Features turn-based combat and multiple endings based on player choices.</p>
+                            <a href="https://www.66rpg.com/game/946423" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Above the Fountain -->
+                    <div class="game-card pixel-border" data-category="pc">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="Above the Fountain.png" alt="Above the Fountain" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Above the Fountain</h3>
+                            <p>First-person narrative puzzle game where players explore surreal worlds. Features mind-bending puzzles and non-linear exploration.</p>
+                            <a href="https://www.66rpg.com/game/1280015" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+
+                    <!-- The Silent Majority -->
+                    <div class="game-card pixel-border" data-category="pc">
+                        <div class="game-image">
+                            <div class="image-placeholder">
+                                <img src="The Silent Majority.png" alt="The Silent Majority" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <h3>The Silent Majority</h3>
+                            <p>Social experiment visual novel exploring cyber violence and online mob mentality. Features moral dilemmas with no clear right answers.</p>
+                            <a href="https://www.66rpg.com/game/950049" 
+                               target="_blank" 
+                               class="archive-link">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="container">
+            <div class="page-navigation">
+                <button class="nav-button page-nav-btn" data-page="about" data-i18n="nav_prev">Previous</button>
+                <button class="nav-button page-nav-btn" data-page="archive" data-i18n="nav_next">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Archive Page -->
+    <div id="archive-page" class="page">
+        <section class="archive">
+            <div class="container">
+                <h2 class="section-title" data-i18n="archive_title">Other Archive</h2>
+                <div class="archive-content">
+                    <div class="archive-category pixel-border">
+                        <h3 data-i18n="archive_gdd">Game Design Documents</h3>
+                        <ul class="archive-list">
+                            <li>
+                                <i class="fas fa-file-alt"></i>
+                                <span>Back Home - Game Design Document</span>
+                                <a href="https://docs.google.com/document/d/1KvKhpyxZNfu3qTfZFWq6XhXn9dfFgQJ2uG56p0Py3tc/edit?usp=sharing" class="archive-link" data-i18n="archive_view">View</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-file-alt"></i>
+                                <span>Party! Paidui! Fiesta! - Game Design Document</span>
+                                <a href="https://docs.google.com/document/d/1mYObztv9K2MpnWNcOTlbD0vit0fEi5UNTJSMXR29Y7Y/edit?usp=sharing" class="archive-link" data-i18n="archive_view">View</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-file-alt"></i>
+                                <span>Space Explorers - Procedural Generation System</span>
+                                <a href="#" class="archive-link" data-i18n="archive_view">View</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="archive-category pixel-border">
+                        <h3 data-i18n="archive_art">Art & Concept Work</h3>
+                        <ul class="archive-list">
+                            <li>
+                                <i class="fas fa-image"></i>
+                                <span>Character Concept Art Collection</span>
+                                <a href="#" class="archive-link" data-i18n="archive_view">View</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-image"></i>
+                                <span>Environment Sketches and Renders</span>
+                                <a href="#" class="archive-link" data-i18n="archive_view">View</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-image"></i>
+                                <span>UI/UX Design Portfolio</span>
+                                <a href="#" class="archive-link" data-i18n="archive_view">View</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="archive-category pixel-border">
+                        <h3 data-i18n="archive_publications">Publications & Talks</h3>
+                        <ul class="archive-list">
+                            <li>
+                                <i class="fas fa-newspaper"></i>
+                                <span>"The Future of Procedural Generation in Games" - GDC Talk 2023</span>
+                                <a href="#" class="archive-link" data-i18n="archive_view">View</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-newspaper"></i>
+                                <span>"Balancing Complexity and Accessibility in Puzzle Games" - Article</span>
+                                <a href="#" class="archive-link" data-i18n="archive_view">View</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-newspaper"></i>
+                                <span>"Narrative Design in Open World Games" - Conference Panel</span>
+                                <a href="#
